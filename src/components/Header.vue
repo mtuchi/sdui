@@ -1,5 +1,5 @@
 <template>
-    <nav id="header" class="fixed w-full z-10 top-0">
+    <nav id="header" class="fixed w-full z-10 top-0 bg-white">
 
         <div id="progress" class="h-1 z-20 top-0"
             style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
@@ -7,9 +7,12 @@
         <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
 
             <div class="pl-4">
-                <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="#">
-                    Sdui NewsFeed
-                </a>
+                <div class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl">
+                    <router-link to="/">
+                        <img src="../assets/logo.svg" alt="Logo">
+                        NewsFeed
+                    </router-link>
+                </div>
             </div>
 
             <div class="block lg:hidden pr-4">
@@ -26,19 +29,35 @@
                 id="nav-content">
                 <ul class="list-reset lg:flex justify-end flex-1 items-center">
                     <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-gray-900 font-bold no-underline" href="#">About</a>
+                        <div class="inline-block py-2 px-4 text-gray-900 font-bold no-underline">
+                            <router-link to="/about">
+                                About
+                            </router-link>
+                        </div>
                     </li>
                     <li class="mr-3">
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
-                            href="#">
-                            Open Source
-                        </a>
+                        <div
+                            class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4">
+                            <router-link to="/os">
+                                Open Source
+                            </router-link>
+                        </div>
                     </li>
                     <li class="mr-3">
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
-                            href="#">
-                            Privacy Policy
-                        </a>
+                        <div
+                            class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4">
+                            <router-link to="/gdpr">
+                                Privacy Policy
+                            </router-link>
+                        </div>
+                    </li>
+                    <li class="mr-3">
+                        <div
+                            class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4">
+                            <router-link to="/add-news">
+                                Submit News
+                            </router-link>
+                        </div>
                     </li>
                 </ul>
             </div>
