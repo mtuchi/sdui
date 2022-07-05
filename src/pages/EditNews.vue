@@ -34,8 +34,11 @@
                     </label>
                 </div>
             </div>
-            <div>
-                <button type="submit">Submit Article Changes</button>
+            <div class="mt-2">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4">
+                    Submit
+                    Article Changes
+                </button>
             </div>
         </form>
     </div>

@@ -51,10 +51,10 @@ export default {
             errors: [],
             article: {
                 id: null,
-                title: "Bug in the JavaAcript",
+                title: "",
                 body: "",
-                author: "Dylan Beattie",
-                cover: "https://dylanbeattie.net/images/parodies/javascript.jpg",
+                author: "",
+                cover: "",
             },
             loading: false
         };
