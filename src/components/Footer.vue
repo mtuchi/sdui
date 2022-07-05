@@ -1,38 +1,21 @@
 <template>
-    <footer class="bg-white border-t border-gray-400 shadow">
-        <div class="container max-w-4xl mx-auto flex py-8">
-            <div class="w-full mx-auto flex flex-wrap">
-                <div class="flex w-full md:w-1/2 ">
-                    <div class="px-8">
-                        <h3 class="font-bold text-gray-900">About</h3>
-                        <p class="py-4 text-gray-600 text-sm">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus
-                            commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
-                        </p>
-                    </div>
+    <footer class="bg-white">
+        <ul class="flex items-center justify-between lg:container px-4 py-6 mx-auto text-sm md:px-6">
+            <li>
+                <div class="px-8">
+                    <h3 class="font-bold text-gray-900">In short brief</h3>
+                    <p class="py-4 text-gray-600 text-sm">
+                        This is a simple NewsFeed web app for Sdui interview
+                    </p>
                 </div>
-
-                <div class="flex w-full md:w-1/2">
-                    <div class="px-8">
-                        <h3 class="font-bold text-gray-900">Social</h3>
-                        <ul class="list-reset items-center text-sm pt-3">
-                            <li>
-                                <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-                                    href="#">Add social link</a>
-                            </li>
-                            <li>
-                                <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-                                    href="#">Add social link</a>
-                            </li>
-                            <li>
-                                <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-                                    href="#">Add social link</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </li>
+            <li>
+                Made with love by
+                <a href="https://github.com/mtuchi/sdui" target="_blank" rel="noopener noreferrer"
+                    class="font-bold">Mtuchi
+                </a>
+            </li>
+        </ul>
     </footer>
 </template>
 

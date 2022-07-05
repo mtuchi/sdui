@@ -1,13 +1,15 @@
 <template>
 
     <body class="font-sans leading-normal tracking-normal">
-        <Header />
-        <div class="container w-full md:max-w-3xl mx-auto pt-20">
-            <div class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
-                <router-view></router-view>
-            </div>
+        <div class="flex flex-col min-h-screen">
+            <Header />
+            <main class="flex-1 lg:container px-4 py-6 mx-auto md:px-6 md:py-12">
+                <div class="flex flex-col items-center justify-center space-y-12">
+                    <router-view></router-view>
+                </div>
+            </main>
+            <Footer />
         </div>
-        <Footer />
     </body>
 </template>
 
