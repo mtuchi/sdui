@@ -81,7 +81,11 @@ export default {
             }
 
             if (this.errors.length == 0) {
-                this.$store.dispatch("addArticle", this.article);
+                this.$store.dispatch("addArticle", this.article).then((resp) => {
+                    console.log(resp.data)
+                }).catch((err) => {
+                    this.errors.push(err.data.message)
+                });
             }
 
         }
