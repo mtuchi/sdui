@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-start justify-between w-full">
-        <div class="content">
+        <div class="content hidden md:block">
             <h1 class="text:xl lg:text-3xl relative">Articles</h1>
             <div class="rounded-sm block relative mt-2 mb-6 bg-slate-400" include="true"
                 style="height: 5px; width: 75px;">
@@ -61,7 +61,7 @@
         </div>
     </div>
 
-    <div class="flex items-start justify-between w-full">
+    <div class="flex items-start justify-between w-full overflow-x-scroll">
         <NewsCard :articles="filteredArticles" />
     </div>
 </template>

@@ -29,7 +29,7 @@
                 <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">
                     {{ getArticle.title }}
                 </h1>
-                <p class="text-sm md:text-base font-normal text-gray-600">Published {{ getArticle.createdAt }}</p>
+                <p class="text-sm md:text-base font-normal text-gray-600">Published {{ this.$moment(getArticle.createdAt).fromNow() }}</p>
             </div>
             <div class="py-2">
                 <img class="w-full" :src="getArticle.cover ? getArticle.cover : 'https://picsum.photos/200/300'"
