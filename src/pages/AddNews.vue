@@ -82,6 +82,7 @@ export default {
 
             if (this.errors.length == 0) {
                 this.$store.dispatch("addArticle", this.article).then((resp) => {
+                    this.article = {};
                     console.log(resp.data)
                 }).catch((err) => {
                     this.errors.push(err.data.message)
