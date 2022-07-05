@@ -2,20 +2,23 @@
     <section class="news-component flex flex-col relative border-t relative z-1 flex-grow">
         <div class="flex flex-col md:flex-row flex-grow flex-no-wrap md:h-full md:overflow-x-scroll">
             <router-link v-for="article in articles" :key="article.id"
-                class="min-h-fit flex flex-col justify-between overflow-hidden text-sm relative responsive-columns flex-grow-0 flex-shrink-0 text-grey-700 cursor-pointer block z-50 p-4 border-b md:border-b-0 md:border-r"
+                class="min-h-fit w-96 flex flex-col justify-between overflow-hidden text-sm relative responsive-columns flex-grow-0 flex-shrink-0 text-grey-700 cursor-pointer block z-50 p-4 border-b md:border-b-0 md:border-r"
                 :to="'/articles/' + article.id" routesenddate="2019-09-23">
                 <div class="flex flex-col justify-between h-full z-10">
-                    <!-- <div class="text-rule text-5xl text-center z-10 flex-grow">
-                            {{ index++ }}
-                        </div> -->
-                    <img :src="article.cover ? article.cover : 'https://picsum.photos/200/300'" :alt="article.title"
-                        class="h-full w-auto" />
+                    <div class="h-96 w-full bg-center bg-cover bg-no-repeat relative"
+                        :style="`background-image: url(${article.cover ? article.cover : 'https://picsum.photos/200/300'});`">
+                        <div class="absolute inset-0 bg-black opacity-40 h-full flex flex-col z-0"></div>
+                        <div class="absolute z-10">
+                            <h2 class="text-2xl p-3 text-white font-bold">{{ article.title }}</h2>
+                        </div>
+                    </div>
 
                     <div class="flex flex-col justify-end z-10">
-                        <div class="uppercase font-thin text-sm tracking-wide text-grey-600">{{ article.createdAt }}
+                        <div class="uppercase font-thin text-sm tracking-wide text-grey-600">published
+                            {{ this.$moment(article.createdAt).fromNow() }}
                         </div>
                         <div class="font-sans text-base font-bold mt-2 uppercase inline-flex text-grey-700">
-                            {{ article.title }}
+                            <span class="font-thin">By</span>&nbsp; {{ article.author }}
                         </div>
                     </div>
                 </div>

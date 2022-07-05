@@ -61,7 +61,9 @@
         </div>
     </div>
 
-    <NewsCard :articles="filteredArticles" />
+    <div class="flex items-start justify-between w-full">
+        <NewsCard :articles="filteredArticles" />
+    </div>
 </template>
 
 <script>
