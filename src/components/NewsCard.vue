@@ -6,7 +6,7 @@
                 :to="'/articles/' + article.id" routesenddate="2019-09-23">
                 <div class="flex flex-col justify-between h-full z-10">
                     <div class="h-96 w-full bg-center bg-cover bg-no-repeat relative"
-                        :style="`background-image: url(${article.cover ? article.cover : 'https://picsum.photos/200/300'});`">
+                        :style="`background-image: url(${article.cover ? article.cover : 'https://picsum.photos/200/300?random=' + article.id});`">
                         <div class="absolute inset-0 bg-black opacity-40 h-full flex flex-col z-0"></div>
                         <div class="absolute z-10">
                             <h2 class="text-2xl p-3 text-white font-bold">{{ article.title }}</h2>
