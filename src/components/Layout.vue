@@ -1,4 +1,5 @@
 <template>
+
     <body class="font-sans leading-normal tracking-normal">
         <div class="flex flex-col min-h-screen">
             <Header />
@@ -7,6 +8,7 @@
                     <router-view></router-view>
                 </div>
             </main>
+            <Alert @trigger-alert="showAlert" v-show="showing" />
             <Footer />
         </div>
     </body>
@@ -15,13 +17,30 @@
 <script>
 import Header from './Header.vue'
 import Footer from './Footer.vue'
+import Alert from './Alert.vue'
 
 export default {
     name: 'Layout',
     components: {
         Header,
-        Footer
+        Footer,
+        Alert
     },
+    data() {
+        return {
+            alertData: {},
+            showing: false
+        }
+    },
+    methods: {
+        showAlert(data) {
+            console.log("nime", data)
+            this.alertData = data;
+            this.showing = true;
+
+            setTimeout(() => this.showing = false, 5000);
+        }
+    }
 
 }
 </script>
