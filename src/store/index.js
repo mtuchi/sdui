@@ -25,7 +25,6 @@ const store = createStore({
   actions: {
     loadArticles({ commit }) {
       return article.getAll().then((res) => {
-        console.log(res.data);
         commit("LOAD_ARTICLES", res.data);
       })
     },
@@ -36,18 +35,16 @@ const store = createStore({
     },
     addArticle({ commit }, payload) {
       return article.create(payload).then((res) => {
-        commit("ADD_ARTICLE", payload);
-        console.log(res.data)
+        commit("ADD_ARTICLE", res.data);
       }).catch((err) => {
         console.log(err)
       })
     },
     updateArticle({ commit }, payload) {
       return article.update(payload.id, payload).then((res) => {
-        commit("STORE_ARTICLE", payload)
-        console.log(res.data)
+        commit("STORE_ARTICLE", res.data);
       }).catch((err) => {
-        console.log(err.data)
+        console.log(err)
       })
     },
     removeArticle({ commit }, id) {

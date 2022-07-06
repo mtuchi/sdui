@@ -80,6 +80,7 @@ export default {
             ascending: false,
             sortBy: 'title',
             searchValue: "",
+            loading: false
         }
     },
     computed: {
@@ -125,13 +126,16 @@ export default {
 
     },
     created() {
-        this.$store.dispatch("loadArticles").then(() => {
-            this.loadArticles();
-        });
+        this.loadArticles();
     },
     methods: {
         loadArticles() {
-            this.articles = this.getArticles
+            this.loading = true;
+            this.$store.dispatch("loadArticles").then(() => {
+                this.articles = this.getArticles
+                this.loading = false
+            });
+
         },
         loadArticle(id) {
             this.searchValue = "";

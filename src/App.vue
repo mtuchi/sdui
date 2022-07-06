@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Alert @triggerAlert="showAlert" v-show="showing" />
+    <Alert v-on:triggerAlert="showAlert" v-show="showing" />
   </Layout>
 </template>
 <script>
@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     showAlert(data) {
-      console.log("nime")
+      console.log("nime", data)
       this.alertData = data;
       this.showing = true;
 
