@@ -77,7 +77,7 @@ export default {
     data() {
         return {
             articles: [],
-            ascending: true,
+            ascending: false,
             sortBy: 'title',
             searchValue: "",
         }

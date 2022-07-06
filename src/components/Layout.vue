@@ -1,5 +1,4 @@
 <template>
-
     <body class="font-sans leading-normal tracking-normal">
         <div class="flex flex-col min-h-screen">
             <Header />
@@ -22,7 +21,8 @@ export default {
     components: {
         Header,
         Footer
-    }
+    },
+
 }
 </script>
 
